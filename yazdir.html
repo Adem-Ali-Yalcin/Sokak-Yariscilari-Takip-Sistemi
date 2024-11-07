@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablo Yazdırma Sayfası</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="./galeri/favicon/yazici.png">
+
+        <style>
+            *{
+                font-family: monospace;
+                font-weight: bold;
+            }
+            body{
+                overflow: auto;
+                margin: 5%;
+                transition: all 0.5s ease;
+            }
+            body::-webkit-scrollbar {
+                width: 6px;
+                height: 10px;
+            }
+            #polis_scroll::-webkit-scrollbar-thumb {
+                background: #a6e448;
+            }
+            #polis_scroll::-webkit-scrollbar-thumb:hover {
+                background: #88ba3c;
+            }
+            #yarisci_scroll::-webkit-scrollbar-thumb {
+                background: #00d0e7;
+            }
+            #yarisci_scroll::-webkit-scrollbar-thumb:hover {
+                background: #3c96ba;
+            }
+            #center{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            #baslik{
+                display: none;
+                width: 100%;
+            }
+            #baslik #baslik_icerik{
+                margin: 30px 0 30px 0;
+                display: flex;
+                align-items: center;
+            }
+            #baslik #icerik{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+                max-height: calc(5vh + 9vw);
+                padding: 10px 0 0 15px;
+                white-space-collapse: collapse;
+                color: #ffffff;
+                font-size: calc(0.5vh + 1.2vw);
+            }
+            #baslik #baslik_yazi{
+                font-size: calc(2.5vh + 0.5vw);
+                text-align: center;
+                color: white;
+                letter-spacing: 2px;
+                border-bottom: 3px #ffffff solid;
+                padding-bottom: 5px;
+            }
+            #baslik #baslik_resim{
+                display: flex;
+                width: calc(5vh + 16vw);
+                object-fit: contain;
+                justify-content: center;
+            }
+            #baslik #baslik_resim img{
+                filter: drop-shadow(0 0 2px black);
+                width: 60%;
+                object-fit: contain;
+            }
+            #tablo{
+                color: #ffffff;
+                text-align: center;
+            }
+            table{
+                width: 100%;
+                color: #ffffff;
+                text-align: center;
+                font-size: calc(1vh + 0.8vw);
+                border-collapse: collapse;
+            }
+            table th{
+                border-top: 3px #ffffff solid;
+                border-bottom: 3px #ffffff solid;
+            }
+            table tr th{
+                padding: 0 15px 0 15px
+            }
+            table td{
+                padding: 10px 10px 10px 10px;
+            }
+            table:last-child{
+                border-bottom: 3px #ffffff solid;
+            }
+
+            #btn_2, #btn_3, #btn_4{
+                display: none;
+            }
+            .menu_butonlari{
+                transition: all 0.5s ease;
+            }
+            @keyframes parla_dusuk {
+                0%{
+                    background-color: #4a4a4a;
+                }
+                100%{
+                    background-color: #000000;
+                }
+            }
+            @keyframes parla_yuksek {
+                0%{
+                    background-color: #c5c5c5;
+                }
+                100%{
+                    background-color: #000000;
+                }
+            }
+            @keyframes parla_dusuk_acik {
+                0%{
+                    background-color: #b3b3b3;
+                }
+                100%{
+                    background-color: #ffffff;
+                }
+            }
+            @keyframes parla_yuksek_acik {
+                0%{
+                    background-color: #4a4a4a;
+                }
+                100%{
+                    background-color: #ffffff;
+                }
+            }
+        </style>
+        <script>
+            const geri_sayim = new Audio("./sesler/menu_secim.mp3");
+            const flas = new Audio("./sesler/bildirim_onay_red.mp3");
+            const tiklama = new Audio("./sesler/polis_menu/polis_menu_klavye.mp3");
+
+            [geri_sayim, flas, tiklama].forEach(i => {
+                i.volume = localStorage.getItem("sfx_vol");
+            });
+
+            window.oncontextmenu = () => {
+                return false;
+            }
+            window.onbeforeunload = () => {
+                sessionStorage.setItem("style", document.getElementsByClassName("menu_butonlari")[0].classList);
+                sessionStorage.setItem("tema", document.getElementsByClassName("menu_butonlari")[0].querySelectorAll("button")[3].querySelector("span").textContent);
+                sessionStorage.setItem("yaydir", document.getElementsByClassName("menu_butonlari")[0].querySelectorAll("button")[2].querySelector("span").textContent);
+            }
+            var esc_engel = true;
+            document.addEventListener("DOMContentLoaded", () => {
+                const btn_cikis = document.getElementById("btn_1");
+                const btn_yazdir = document.getElementById("btn_2");
+                const btn_yaydir = document.getElementById("btn_3");
+                const btn_tema = document.getElementById("btn_4");
+                document.body.querySelector(".menu_butonlari").style.animation = "none";
+
+                let baslik = document.getElementById("baslik").querySelectorAll("#baslik > div");
+                baslik[0].querySelector("span").textContent = sessionStorage.getItem("baslik");
+                baslik[1].querySelectorAll("div")[0].querySelector("img").src = sessionStorage.getItem("logo");
+                baslik[1].querySelectorAll("div")[0].querySelector("img").style.width = sessionStorage.getItem("logo_boyut");
+                baslik[1].querySelectorAll("div")[1].innerHTML = sessionStorage.getItem("bilgi");
+
+                document.body.id = sessionStorage.getItem("scroll");
+
+                if(sessionStorage.getItem("baslik") && sessionStorage.getItem("logo") && sessionStorage.getItem("logo_boyut")){
+                    document.getElementById("baslik").style.display = "block";
+                    esc_engel = false;
+                }
+
+                window.addEventListener("keydown", (event) => {
+                    if(event.key == "Escape"){
+                        btn_cikis.click();
+                    }
+                    if((event.key == "p" || event.key == "P") && !esc_engel){
+                        btn_yazdir.click();
+                    }
+                    if((event.key == "t" || event.key == "T") && !esc_engel){
+                        btn_tema.click();
+                    }
+                    if((event.key == "y" || event.key == "Y")  && !esc_engel){
+                        btn_yaydir.click()
+                    }
+                    if((event.key == "m" || event.key == "M")  && !esc_engel){
+                        btn_tema.click()
+                    }
+                });
+
+                btn_cikis.onclick = () => {
+                    window.close(); 
+                }
+
+                const tema = (body_renk, tablo_renk) => {
+                    baslik[0].querySelector("span").style.color = tablo_renk;
+                    baslik[0].style.borderBottom = `3px ${tablo_renk} solid`;
+                    baslik[1].querySelectorAll("div")[1].style.color = tablo_renk;
+                    const tablo = document.getElementById("tablo").querySelector("table");
+                    document.body.style.background = body_renk;
+                    const tablo_tr = tablo.querySelector("tbody").querySelectorAll("tr");
+                    tablo.querySelector("tr").querySelectorAll("th").forEach(i => {
+                        i.style.borderBottom = `3px ${tablo_renk} solid`;
+                        i.style.borderTop = `3px ${tablo_renk} solid`;
+                    });
+                    tablo_tr.forEach(i => {
+                        if(i.style.color != "red"){
+                            i.style.color = tablo_renk;
+                        }
+                    });
+                    tablo_tr[tablo_tr.length - 1].style.borderBottom = `3px ${tablo_renk} solid`;
+                }
+
+                if(sessionStorage.getItem("style")){
+                    document.getElementsByClassName("menu_butonlari")[0].classList = sessionStorage.getItem("style");
+                }
+
+                if(sessionStorage.getItem("tablo")){
+                    document.getElementById("tablo").innerHTML = sessionStorage.getItem("tablo");
+                    btn_yazdir.style.display = "inline-flex";
+                    btn_tema.style.display = "inline-flex";
+                    btn_yaydir.style.display = "inline-flex";
+                }
+                
+                if(sessionStorage.getItem("tema")){
+                    var btn_text = btn_tema.querySelector("span");
+                    if(sessionStorage.getItem("tema") == "Karanlık"){
+                        btn_text.textContent = "Karanlık";
+                        tema("#000000", "#ffffff");
+                    }
+                    else{
+                        btn_text.textContent = "Aydınlık";
+                        tema("#ffffff", "#000000");
+                    }
+                }
+                if(sessionStorage.getItem("yaydir")){
+                    var btn_text = btn_yaydir.querySelector("span");
+                    if(sessionStorage.getItem("yaydir") == "Yaydır - Kapalı"){
+                        btn_text.textContent = "Yaydır - Kapalı";
+                    }
+                    else{
+                        btn_text.textContent = "Yaydır - Açık";
+                    }
+                }
+
+                const ses_oynat = (ses) => {
+                    ses.currentTime = 0
+                    ses.play();
+                }
+                btn_yazdir.onclick = () => {
+                    btn_yazdir.blur();
+                    esc_engel = true;
+                    const tablo = document.getElementById("tablo").querySelector("table");
+                    const butonlar = document.body.querySelector(".menu_butonlari");
+                    const yaydir = btn_yaydir.querySelector("span").textContent;
+
+                    document.body.style.margin = yaydir == "Yaydır - Kapalı" ? "" : "0";
+                    butonlar.style.opacity = "0";
+                    
+                    var anim;
+                    var anim2
+                    if(butonlar.querySelectorAll("button")[3].querySelector("span").textContent == "Karanlık"){
+                        anim = "parla_dusuk 0.5s linear infinite";
+                        anim2 = "parla_yuksek 0.5s linear";
+                    }
+                    else{
+                        anim = "parla_dusuk_acik 0.5s linear infinite";
+                        anim2 = "parla_yuksek_acik 0.5s linear";
+                    }
+
+                    document.body.style.animation = anim;
+                    ses_oynat(geri_sayim);
+                    setTimeout(() =>{
+                        ses_oynat(geri_sayim);
+                    },500)
+                    setTimeout(() => {
+                        document.body.style.animation = anim2;
+                        ses_oynat(flas);
+                        setTimeout(() => {
+                            window.print();
+                            esc_engel = false;
+                            document.body.style.margin = butonlar.style.opacity = "";
+                        }, 550);
+                    }, 1000);
+                }
+
+                btn_tema.onclick = () => {
+                    btn_tema.blur();
+                    var btn_text = btn_tema.querySelector("span");
+                    switch(btn_text.textContent){
+                        case "Aydınlık":
+                            btn_text.textContent = "Karanlık";
+                            tema("#000000", "#ffffff");
+                            break;
+                        default:
+                            btn_text.textContent = "Aydınlık";
+                            tema("#ffffff", "#000000");
+                            break; 
+                    }                    
+                }
+
+                btn_yaydir.onclick = () => {
+                    btn_yaydir.blur();
+                    var btn_text = btn_yaydir.querySelector("span");
+                    switch(btn_text.textContent){
+                        case "Yaydır - Kapalı":
+                            btn_text.textContent = "Yaydır - Açık";
+                            break;
+                        default:
+                            btn_text.textContent = "Yaydır - Kapalı";
+                            break; 
+                    }                    
+                }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div id="baslik">
+            <div id="baslik_yazi">
+                <span></span>
+            </div>
+            <div id="baslik_icerik">
+                <div id="baslik_resim">
+                    <img src="" alt="logo">
+                </div>
+                <div id="icerik">
+                    
+                </div>
+            </div>
+        </div>
+        <div id="tablo">
+                <p style="font-size: calc(0.7vh + 0.9vw);">Bu sayfa olduğu gibi çalışmaz.<br> Asıl program içinde yazdır tuşu basıldıktan sonra burada bir tablo görüntülenecektir.</p> 
+        </div>
+
+        <div class="menu_butonlari" id="center">
+            <button id="btn_1">
+                <img src="./galeri/esc.png">
+                <span>Çıkış</span>
+            </button>
+            <button id="btn_2">
+                <img src="./galeri/P.png">
+                <span>Yazdır</span>
+            </button>
+            <button id="btn_3">
+                <img src="./galeri/Y.png">
+                <span>Yaydır - Kapalı</span>
+            </button>
+            <button id="btn_4">
+                <img src="./galeri/M.png">
+                <span>Karanlık</span>
+            </button>
+        </div>
+    </body>
+</html>

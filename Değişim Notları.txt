@@ -1,0 +1,307 @@
+15.03.2024
+    - Programlama dilleri seçildi. Tema ve özellikler kararlaştırıldı.
+
+16.03.2024 
+    - Başlangıç menüsü ve bildirim paneli tasarlandı ve eklendi.
+
+17.03.2024 
+    - Test amaçlı, tuşlara ses ve siteye müzik eklendi.
+
+18.03.2024 
+    - Veri tabanı tasarlandı ve içeriğine eklemeler yapıldı.
+    - Polis veri tabanı menüsü tasarlandı. 
+    - Polis veri tabanı için açılan bildirim penceresindeki evet butonuna polis veri tabanını açma komutu eklendi.
+
+19.03.2024 
+    - Ayarlar menüsüne ses efektlerinin ve müziklerin ses seviyesini ayarlamak için sliderlar eklendi. 
+    - Polis veri tabanına ses efektleri eklendi.
+    - Veri tabanı dosyası ve içeriği hazırlandı.
+    - Mini oyunlar ekleme kararı alındı ve prototipleri oluşturuldu.
+
+21.03.2024 
+    - Veri tabanına giriş için login ekranı tasarlandı ve eklendi. 
+    - Login ekranı ve veri tabanı ekranları için animasyonlar tasarlandı.
+
+22.03.2024 
+    - Yarışçı veri tabanı menüsü tasarlandı ve eklendi. 
+    - Login ve veri tabanı ekranlarına animasyonlar uygulandı.
+    - Bütün projenin ses efektleri tekrardan düzenlendi.
+    - Ses efektlerini ve müzikleri ses seviyeleri normalize edildi. 
+    - Animasyonların zaman aşımlı kod karmaşaları düzeltildi. 
+    - CSS id/class uyuşmazlıkları(class yerine id, id yerine class atamaları) düzeltildi.
+
+23.03.2024 
+    - Dosya erişimi sorunları nedeniyle sunucu için kullanılan LiveServer eklentisi, NodeJS localhost ile değiştirildi.
+    - Yarışçı veri tabanıda ufak stil değişimleri yapıldı. 
+    - Ayarlar menüsüne "Profilleri Yönet" özelliği eklendi. 
+    - Profil yönetim metodları oluşturuldu.
+
+25.03.2024
+    - Profilleri yönet menüsüne işlev verildi. (Profilleri listeleme)
+    - Profilleri yönet menüsüne, polis ve yarışçı için farklı "Yeni Profil Oluştur" butonları eklendi.
+    - Profilleri yönet menüsündeki bütün profillere "Profili Yönet" menüsü eklendi.(şuan işlevsiz) 
+    - Profil yönetim metodları yeniden düzenlendi.
+
+26.03.2024
+    - Profili yönet menüsüne profil bilgilerini getirme metodları eklendi.
+    - Profili yönet menüsüne "Güncelle" ve "Sil" butonları işlevleri ile beraber eklendi.
+    - Profili yönet menüsündeki "Güncelle" butonu "profil_ekle ve "profil_sil" metodları ile işlevlendirildi.
+
+27.03.2024
+    - Profili yönet menüsünde güncelleme ve silme işlevi için onay kutusu oluşturuldu.
+    - "profil_sil" metodunun yanlış veriyi hedef alma hatası düzeltildi.
+
+29.03.2024
+    - Karışıklık giderme amacıyla bazı JavaScript değişkenlerinde ad değişimleri yapıldı.
+    - Değişken adı değişimi sonucu oluşan profil silme hatası düzeltildi.
+    - Profilleri yönet menüsündeki "Güncelle" butonu artık gerçekten güncelleme işlevine sahip.
+    - Yarışçı profilleri için de yakalanma durumu eklendi.
+    - Kod karmaşasının artışı üzerine JavaScript'e yeni kodlar eklemeden önce veri tabanının ve veri tabanı menülerinin tasarım aşamasının tamamen bitirilmesi kararı alındı.
+
+31.03.2024
+    - Veri tabanındaki "yariscilar", "yarisci_hesaplar" ve "polis_hesaplar" v*erilerine yeni anahtarlar eklendi
+    - Polis ve yarışçı veri tabanlarındaki, yarışçıları listeleme menüsü butonuna yarışçı verilerini listeleme işlevi verildi.
+    - Silme, ekleme, güncelleme metodları yeni eklenen anahtarlara göre güncellendi.
+    - Yarışçılar ve arabaları arasında veri bağı sağlandı.
+    - Bazı fonksiyon adlarında ve aldıkları parametrelerde değişimler yapıldı.
+
+03.04.2024
+    - Polis profillerine "ikramiye" değeri eklendi.
+    - Polis profillerine EMP, çivi şeridi, barikat ve helikopter ekipmanları eklendi.
+    - Yarışçılar için potansiyel ikramiye(kazanılan yarış sayısı * aranma kat sayısı) değeri eklendi.
+    - Yarışçılara polisleri, polislere de yarışçıları alakadar eden değerler gizlendi.
+    - Yarışçıların listelendiği tablonun stil hataları(pencere boyutuna bağlı abartı yazı boyutu, değerler arası dar boşluklar, başlıkta olmaması gereken hover olayı, polis ve yarışçı hover stillerinin karışması) düzeltildi.
+
+08.04.2024
+    - Yarışçı listesine ekleme, silme ve güncelleme özellikleri eklendi.
+    - Yarışçı profillerine, yakalanan yarışçılar üzerinde değişim yapamama kuralı eklendi.
+
+10.04.2024
+    - Mini oyunlar için ses efektleri hazırlandı.
+
+17.04.2024
+    - CALISTIR.bat dosyası oluşturuldu.
+    - Yarışçı menüsündeki "Kara Liste Arabaları" butonuna veri tabanındaki arabaları listeleme özelliği eklendi.
+    - Veri ekleme ve güncelleme hata mesajları durumlara göre detaylandırıldı.
+    - Gereksiz kod parçaları yoruma alındı/silindi.
+    - Yarışçı profilleri ve arabaları artık veri listeleme menülerinde görüntülenmeyecek.(Fairhaven sistemine erişebilen yarışçılar, yasa dışı yarışları yöneten kişilerdir. Bu kişiler Fairhaven sisteminde gizli tutulurlar ve Rockport Polis Departmanı sisteminde de görüntülenemezler.)
+
+19.04.2024
+    - Profil oluşturma menüsüne sekme sırası ayarlandı. (İptale basınlığında önceki menüye dön)
+    - Program günlüğü(CALISTIR.bat) mesajları detaylandırıldı ve artık tetiklenme saatleri ile yazdırılacaklar.
+    - Artık "Yakalandı" durumunda olan yarışçı profilleri polis menüsünde görüntülenecek ve polis menüsünden erişim seviyesi "TAM" olan polis profilleri tarafından serbest bırakılabilecekler.
+
+21.04.2024
+    - Polis menüsüne ekipman satın alma menüsü eklendi. (işlevsiz)
+    - Hatalı giriş mesajları artık sayfa bildirimi yerine tasarlanılan bildirim penceresiyle gösteriliyor.
+    - ESC olayları tek bir metodda toplandı.
+    - Giriş menüsü butonlarının gereksiz kodları(her tıklanışta açık bildirim pencerelerini ve aktiflik stili uygulanmış menü butonlarını kontrol etme) kaldırıldı.
+    - Bildirim pencereleri artık oluşturma komutu verildiğinde ekranda varsa kendi türünden olanları kendisi kapatacak.
+    - Polis ve yarışçı menülerindeki bildirim penceresi açıkken arka planla etkileşime geçebilme hatası düzeltildi.
+    - Bildirim penceresindeki butonların stil hataları(aşırı büyük kenarlıklar, gereksiz animasyon) düzeltildi.
+    - Yarışçı ve yarışçı profil yönetiminin hata mesajları özelleştirildi.
+    - Artık sunucu başlatılırken bir hata meydana gelirse program başlatılmayacak.
+
+21.04.2024
+    - Polis menüsündeki ekipman satın alma seçimlerine satın alma işlevi verildi.
+    - Polis menüsündeki ikramiye değerinin okunması "." işareti ile ayrıştırılarak kolaylaştırıldı.
+    - Menülerden çıkış yaparken oluşturulan parlama efekti nesnesinin (pasif halde) menü nesnesi içinde bulunmasına rağmen oluşturulması hatası düzeltildi.
+    - Yarışçıları listeleme menüsündeki toplam yarışçı değerine (yakalananlar hariç) profil yarışçıların da dahil edilmesi hatası düzeltildi.
+    - Artık menülerin bağlanılan sunucu idleri oturum kapatılana kadar sabit kalacak.
+
+29.04.2024
+    - Kullanıcı 60 saniyeliğine inaktif kaldığında aktifleşecek bir inaktiflik ekranı(otoyol videolu arkaplan) eklendi.
+    - Bildirim panellerindeki ve menülerdeki simgeler ve yarışçı menüsüne ait login menüsü logosu ve animasyonu yenilendi.
+    - Profil yönetim buton seslerinin eksikliği giderildi.
+    - Artık inaktiflik ekranı aktifse herhangi bir harekette bulunulana kadar menü müzikleri boğuk şekilde(lowpass filtresi) duyulacak.
+    - CALISTIR.bat eğer nodeJS kurulumunu veya script.js dosyasını bulamazsa artık programı başlatma noktasına bile uğramayacak.
+    - Artık program varsayılan tarayıcıdan açılacak.
+
+30.04.2024
+    - Ses efektlerinin ve müziklerin ses seviyeleri artık çerez olarak kayıt tutulacak. 
+    - Menü müziklerinin daha optimizeli şekilde oynatılabilmesi için muzik_oynat metodu geliştirildi.
+    - Yazı girişlerinin otomatik doldurma özellikleri devre dışı bırakıldı.
+
+01.04.2024
+    - Login ekranıda enter basıldıktan sonra giriş başarılı olduğunda odağın yazı kutularında kalması ve login tamamlanana kadar tuş seslerinin tuş basımında oynatılması hatası düzeltildi.
+    - Polis menüsü sokak yarışçıları listesi tablosundaki PLAKA başlığı eksikliği giderildi.
+    - Her iki tarafında menülerinin listelerine başlığa göre sıralama([a-z], [0-9] ve tersleri) özelliği eklendi.
+
+02.04.2024
+    - Yarışçı menüsü için yarışları listeleme menüsü sadece listeleme özelliğiyle eklendi.
+    - Türkçe karakterleri sıralama hatası düzeltildi.
+
+03.04.2024
+    - Bütün ekleme ve güncelleme veri tipi kontrolleri daha uygun kontrollerle değiştirildi. (önceki => güncel)(giriş yazı değeri == ""? => giriş yazı değeri uzunluğu <= 0?, sayısal değer 0 > x > 1000? => sayısal değer 0 >= x > 1000 ve sayısal değer uzunluğu <= 0?)
+    - Bazı veri girişlerinin(motor gücü, rütbe) kontrole tabii tutulmaması/hatalı tutulması hatası düzeltildi.
+    - ESC tuşu ile menülerden çıkıldığında menü müziğinin durmaması sorunu düzeltildi.
+    - Ekranda birden fazla bildirim paneli varken ESC basıldığında öndeki panelin kapanıp panellerin arkasına kalan menünün panel hâlâ ekrandayken etkileşime açık hale gelmesi hatası düzeltildi.
+    - Yarışçı menüsüdeki yarışları listele menüsüne ekleme, silme ve güncelleme özellikleri eklendi.
+    - Hatalı script.js kodları(boş veri ekleme, if else mantıksız şartlar, şart sonucu yanlış verinin eşitlenmesi) düzeltildi.
+    - Ayarlar & Yönetim menü paneline paneli kapatma tuşu(Tamam) eklendi, stil hataları düzeltildi ve bütün sekmeleri sırasına göre bağlandı.
+    - Polis ve yarışçı başlangıç menü bildirim panellerinin hayır butonlarının Ayarlar & Yönetim menüsünü açması hatası düzeltildi.
+    - Fairhaven veri tabanı adı artık Fairhaven V1.
+    - Başlangıç menüsü stil hataları(panel kapandıktan sonra seçili stilde kalma veya focus stilinde kalma) düzeltildi.
+    - Tablolu alt menülere yazdırma özelliği eklendi.
+    - Tablolu menülerde açılan panellerin menünün alt kısmındaki butonlara gereksiz ses efekti eklemesi hatası düzeltildi.
+    - Envanterde bulunan ekipmanlar artık sağ tık ile iade edilebilecek.
+    - Kara liste arabaları menüsü tablo satırı hover stili veri yönetim olayı(ekle-sil-düzenle) olmaması sebebiyle kaldırıldı.
+    - İlerleme Özeti - 3/4:
+        - Başlangıç Menüsü:
+            - Rockport Polis Departmanı Veri Tabanı
+            - Fairhaven V1 Veri Tabanı
+            - Ayarlar & Yönetim
+                - Ses efekti ses seviyesi sliderı
+                - Müzik ses seviyesi sliderı
+                - Profilleri Yönet:
+                    - Yeni Polis Profili Oluştur
+                    - [Polis Profilleri]
+                    - Yeni Yarışçı Profili Oluştur
+                    - [Yarışçı Profilleri]
+
+        - Rockport Polis Departmanı Veri Tabanı:
+            - Yarışçıları Listele:
+                - Yetki -> TAM:
+                    - Yarışçıları:
+                        - Listele
+                        - Ekle
+                        - Sil
+                        - Güncelle
+                    - Yakalanmış Profil Yarışçıları:
+                        - Listele
+                        - Serbest bırak
+                - Yetki -> YARI:
+                    - Yarışçıları:
+                        - Listele
+                - Listeyi Sırala
+                - Listeyi Yazdır
+
+            - Ekipman Marketi:
+                - Satın Al / İade et:
+                    - EMP (Electromagnetic Pulse / Elektromanyetik Darbe) : ₺60.000
+                    - Çivi Şeridi : ₺40.000
+                    - Helikopter : ₺100.000
+                    - Barikat : ₺30.000
+
+            - Takip Başlat | GELİŞTİRME AŞAMASINDA
+        
+        - Fairhaven V1 Veri Tabanı:
+            - Kara Liste
+                - Yetki -> TAM:
+                    - Yarışçıları:
+                        - Listele
+                        - Ekle
+                        - Durum != Yakalandı:
+                            - Sil
+                            - Güncelle
+                - Yetki -> YARI:
+                    - Yarışçıları:
+                        - Listele
+                - Listeyi Sırala
+                - Listeyi Yazdır
+
+           - Kara Liste Arabaları
+                - Yetki -> TAM && YARI:
+                    - Listele
+                - Listeyi Sırala
+                - Listeyi Yazdır
+           
+           - Yarışları Yönet:
+                - Yetki -> TAM:
+                    - Listele
+                    - Ekle
+                    - Sil
+                    - Güncelle
+                - Yetki -> YARI
+                    - Listele
+                - Listeyi Sırala
+                - Listeyi Yazdır
+            
+            - Yarış Başlat | GELİŞTİRME AŞAMASINDA
+    - Temel özellikler hazır.
+
+06.05.2024
+    - Yazdırma sayfasının hatalı oturum değişkeni tanımlaması (eski => yeni)(Yazdırma sayfası her yenilendiğinde sayfadaki tabloyu kaydet => Ana sayfadan tabloyu al ve onu oturuma kaydet) düzeltildi.
+    - Menülerdeki bilgilerle ekstra detaylar(yarış uzunluğu ortalaması, ortalama potansiyel ikramiye, ortalama aranma katsayısı) eklendi.
+    - Sayıların küsuratı artık nokta yerine virgül ile görüntülencek.
+    - Artık erişim yetkisi TAM olmayan profillerin listeledikleri tabloların satırlarına hover stili uygulanmayacak. 
+
+08.05.2024
+    - Rastgele yarış olayları gerçekleşterecek ve bunlara bağlı olarak yarışçı ve yarış verilerini güncelleyecek (zamanı) ileri sar özelliği eklendi.
+    - (eski => yeni) Bildirim/yönetim paneli açıldıktan sonra sayfadaki bütün butonlara hover olayı ekle => Bildirim/yönetim paneli içindeki butonlara hover olayı ekle.
+    - İnaktiflik ekranı videosunun tekrarla modunda olmaması eksikliği giderildi.
+    - Artık tarayıcı sekmesinin başlığı ve ikonu bulunulan menüye göre değişiyor.
+
+09.05.2024
+    - Takip/Yarış başlat menüleri oluşturuldu. (sağ tık ile açılabiliyor)(içeriği şuan işlevsiz)
+    - Sokak Yarışçılarını Listele menüsü Takip Başlat menüsü ile bağdaştırıldı.
+    - Yarışları Listele/Yönet menüsü Yarış Başlat menüsü ile bağdaştırıldı.
+
+11.05.2024
+    - Takip/Yarış başlat onay panelinde yarışçı/yarış adının bazen undefined olarak görüntülenmesi hatası düzeltildi.
+    - Takip/Yarış başlat menülerinden Yazdır tuşu kaldırıldı.
+    - Sokak yarışı oyunu için yeni prototip oluşturuldu.
+
+17.05.2024
+    - Bazı tarayıcıların sunucuyu başlatmadan veri dosyasını okuyabilmesi sonucu başlangıç kontrolünü aşması hatası düzeltildi.(script.js dosyasından kontrol için boş metot çağırma)
+    - Polis takibi oyunu için yeni prototip oluşturuldu.
+    - Bildirim paneli butonlarının ve başlangıç menüsü butonlarının kenarlık stilleri birbirinden bağımsız hale getirildi. DETAY => Bildirim paneli butonlarının stillerinin başlangıç menüsündeki butonların stilleri ile aynı kategoride bulunması ve bu yüzden arka plan görsellerinin boyutlarının uyuşmaması nedeniyle !important ile atanmış bildirim panelindeki butonların arka plan boyutları artık !important değil ve artık iki buton türünün kenarlık stili ataması ayrı kategorilerde yer alıyor.
+    - Devre dışı bırakılan butonlar kararacak şekilde stillendirildi.
+
+20.05.2024
+    - Bazı veri ekleme/güncelleme komutlarında sayısal değerlerin string değer olarak işlenmesi hatası düzeltildi.
+    - Boyut stili değeri ayarlamaları.
+    - Kara Liste Arabaları menüsünden zamanı ileri sarma özelliği kaldırıldı.
+    - Menü altlarındaki buton ikonları polis_menu klasöründen galeri klasörüne taşındı. (İkonlar polis menüsüne özel değil.)
+    - Eksik buton ikonları eklendi.
+    - Yarış oyunu turbo özelliği hataları düzeltildi.
+    - Yarış oyunu şerit değiştirme özelliği eklendi.
+    - Artık yarış uzunluğu en az 10KM, en fazla 200KM olabilecek.
+    - Müzik oynatıcı artık daha doğru şekilde döngü ve geçiş yapabiliyor.
+
+22.05.2024
+    - Takip başlat menüsünündeki listelemenin kesintili çalışma hatası düzeltildi.
+    - Boşta duran değişkenler ve gereksiz atamalar silindi.
+    - Eksik sekme başlığı varyansları eklendi.
+    - Artık erişim seviyelerine göre listeleme menüsü butonlarında yönetim izninin olup olmadığını belirtecek. (YARI / TAM)(Sokak Yarışçıları Listesi / Sokak Yarışçısı Bilgilerini Yönet)
+    - Sinyal bozucu ekipmanı eklendi.
+
+27.05.2024
+    - Yarışlar için adaptif müzik prototipi oluşturuldu.
+    - Yarış adları da adaptif sekme başlığına dahil edildi.
+    - Sinyal bozucu efektinin yanlış sonlanması nedeniyle turbo kullanıldığında yaşanan performans sorunu düzeltildi.
+    - Müzik oynatıcının timeout kaydını tutan değişkeni genel değişkenden özel nesneye değiştirildi.
+
+28.05.2024
+    - Müzikler artık genel tanımlanmış değişkenler yerine oynatma listesi işlevindeki nesnelerde tutuluyor.
+    - Müzik oynatıcının durdurma fonksiyonu ayrı bir metot çağrısı haline getirildi ve artık nesne elemanlarından seçim yaparak durduracak.
+
+30.05.2024
+    - Müzik alternatifleri eklendi.
+    - Yarışçı verisi eklerken hatalı veri girildiğinde hatanın bildirim panelinin butonları haricindeki butonların devre dışı kalmaması hatası düzeltildi.
+    - Menülerden çıkıldığında müziğin durmaması hatası düzeltildi.
+
+30.06.2024
+    - Veri düzenlemesi yapılabilen ekranlarda buton tıklaması için atanmış tuşların butonların olaylarını tetiklenmesi hatası düzeltildi.
+    - Sunucu tarafındaki boş veri kontrolleri optimize edildi ve mantık hataları düzeltildi.
+
+08.07.2024
+    - NPC polisler için EMP fonksiyonu eklendi.
+
+15.07.2024
+    - Yarışlar için yeni adaptif müzik eklendi: Bending Light.
+    - TAM yetkili profil tablo yazdırırken son satırın silinmesi hatası düzeltildi.
+
+24.07.2024
+    - Güncelleme fonksiyonun bazı verileri silmesine neden olan mantık hatası giderildi. 
+
+30.07.2024
+    - Yarış için rastgele olay çemberleri eklendi.(yarışa etkisiz, sadece görsel)
+    - Bozucu ses efektinin çıkış bölümünün yarış bittikten sonra oynatılması hatası düzeltildi. Bağlı: Timeout ve interval silme metotlarında elemanı aranan listenin elemanı silinecek liste ile eşleşmemesi hatası düzeltildi.
+
+10.08.2024
+    - Custom müziklere eklendi: Xenith800 - Sun God
+
+24.08.2024
+    - Menülerden geri çıkış sesinin 2 kere oynatılması hatası düzeltildi. Buton tıklaması ve esc tuşu basılması fonksiyonundan ses kaldırıldı.
+    - Alt menülerin çıkış tuşu yazısı "Geri" olarak değiştirildi.

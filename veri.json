@@ -1,0 +1,412 @@
+[
+  {
+    "yariscilar": [
+      {
+        "id": 0,
+        "isim": "Clarence Callahan",
+        "araba_id": 0,
+        "kazanilan_yarislar": 126,
+        "aranma_katsayisi": 5,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 1,
+        "isim": "Toru Sato",
+        "araba_id": 1,
+        "kazanilan_yarislar": 124,
+        "aranma_katsayisi": 5,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 2,
+        "isim": "Ronald McCrea",
+        "araba_id": 2,
+        "kazanilan_yarislar": 139,
+        "aranma_katsayisi": 5,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 3,
+        "isim": "Joe Vega",
+        "araba_id": 3,
+        "kazanilan_yarislar": 126,
+        "aranma_katsayisi": 5,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 4,
+        "isim": "Wes Allen",
+        "araba_id": 4,
+        "kazanilan_yarislar": 100,
+        "aranma_katsayisi": 5,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 5,
+        "isim": "Hector Domingo",
+        "araba_id": 5,
+        "kazanilan_yarislar": 100,
+        "aranma_katsayisi": 4,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 6,
+        "isim": "Kira Nakazato",
+        "araba_id": 6,
+        "kazanilan_yarislar": 98,
+        "aranma_katsayisi": 4,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 7,
+        "isim": "Jade Barrett",
+        "araba_id": 7,
+        "kazanilan_yarislar": 109,
+        "aranma_katsayisi": 4,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 8,
+        "isim": "Eugene James",
+        "araba_id": 8,
+        "kazanilan_yarislar": 101,
+        "aranma_katsayisi": 3,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 9,
+        "isim": "Karl Smit",
+        "araba_id": 9,
+        "kazanilan_yarislar": 87,
+        "aranma_katsayisi": 3,
+        "son_gorulme": "Rockport",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 10,
+        "isim": "Lou Park",
+        "araba_id": 10,
+        "kazanilan_yarislar": 98,
+        "aranma_katsayisi": 2,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 11,
+        "isim": "Isabel Diaz",
+        "araba_id": 11,
+        "kazanilan_yarislar": 86,
+        "aranma_katsayisi": 2,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 12,
+        "isim": "Victor Vasquez",
+        "araba_id": 12,
+        "kazanilan_yarislar": 81,
+        "aranma_katsayisi": 1,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      },
+      {
+        "id": 13,
+        "isim": "Vince Kilic",
+        "araba_id": 13,
+        "kazanilan_yarislar": 0,
+        "aranma_katsayisi": 0,
+        "son_gorulme": "Rockport",
+        "durum": "Yakalandı"
+      },
+      {
+        "id": 14,
+        "isim": "Ho Seun",
+        "araba_id": 14,
+        "kazanilan_yarislar": 73,
+        "aranma_katsayisi": 1,
+        "son_gorulme": "Rosewood",
+        "durum": "Aranıyor"
+      }
+    ],
+    "arabalar": [
+      {
+        "id": 0,
+        "marka": "BMW",
+        "model": "M3 GTR ALMS (E46)",
+        "hp": 440,
+        "plaka": "27ATO63"
+      },
+      {
+        "id": 1,
+        "marka": "Mercedes-Benz",
+        "model": "SLR McLaren (C199)",
+        "hp": 526,
+        "plaka": "56ZYN03"
+      },
+      {
+        "id": 2,
+        "marka": "Aston Martin",
+        "model": "DB9",
+        "hp": 470,
+        "plaka": "54YTH93"
+      },
+      {
+        "id": 3,
+        "marka": "Dodge",
+        "model": "Viper SRT-10 (ZB I)",
+        "hp": 500,
+        "plaka": "41HLT54"
+      },
+      {
+        "id": 4,
+        "marka": "Chevrolet",
+        "model": "Corvette C6",
+        "hp": 504,
+        "plaka": "23TAK42"
+      },
+      {
+        "id": 5,
+        "marka": "Lamborghini",
+        "model": "Gallardo Coupé",
+        "hp": 552,
+        "plaka": "15LLT16"
+      },
+      {
+        "id": 6,
+        "marka": "Mercedes-Benz",
+        "model": "CLK 500 (C209)",
+        "hp": 383,
+        "plaka": "12FTL87"
+      },
+      {
+        "id": 7,
+        "marka": "Ford",
+        "model": "Mustang GT (S-197)",
+        "hp": 305,
+        "plaka": "09AAE81"
+      },
+      {
+        "id": 8,
+        "marka": "Mitsubishi",
+        "model": "Lancer Evolution VIII (CT9A)",
+        "hp": 300,
+        "plaka": "54RHL53"
+      },
+      {
+        "id": 9,
+        "marka": "Porsche",
+        "model": "Cayman S (987)",
+        "hp": 344,
+        "plaka": "24LAL34"
+      },
+      {
+        "id": 10,
+        "marka": "Mitsubishi",
+        "model": "Eclipse GT",
+        "hp": 294,
+        "plaka": "12FAR34"
+      },
+      {
+        "id": 11,
+        "marka": "Mazda",
+        "model": "RX-8 (SE3P)",
+        "hp": 255,
+        "plaka": "67KYO43"
+      },
+      {
+        "id": 12,
+        "marka": "Toyota",
+        "model": "Supra (JZA80)",
+        "hp": 300,
+        "plaka": "20BLK86"
+      },
+      {
+        "id": 13,
+        "marka": "Lexus",
+        "model": "IS 300 (JCE10)",
+        "hp": "260",
+        "plaka": "34TRT65"
+      },
+      {
+        "id": 14,
+        "marka": "Volkswagen",
+        "model": "Golf GTI (Mk5)",
+        "hp": "249",
+        "plaka": "03KJL50"
+      },
+      {
+        "id": 15,
+        "marka": "bos araba1",
+        "model": "bos model1",
+        "hp": 100,
+        "plaka": "bos plaka1"
+      },
+      {
+        "id": 16,
+        "marka": "bos araba2",
+        "model": "bos model2",
+        "hp": 100,
+        "plaka": "bos plaka2"
+      },
+      {
+        "id": 17,
+        "marka": "McLaren",
+        "model": "P1",
+        "hp": 913,
+        "plaka": "55HRO34"
+      }
+    ],
+    "hesaplar": [
+      {
+        "yarisci_hesap": [
+          {
+            "id": 0,
+            "erisim": "TAM",
+            "kullanici_adi": "BigRock",
+            "sifre": "123456",
+            "araba_id": 15,
+            "kazanilan_yarislar": 0,
+            "aranma_katsayisi": 1,
+            "son_gorulme": "",
+            "durum": "Aranıyor"
+          },
+          {
+            "id": 1,
+            "erisim": "YARI",
+            "kullanici_adi": "Jacc",
+            "sifre": "12345",
+            "araba_id": 16,
+            "kazanilan_yarislar": 0,
+            "aranma_katsayisi": 1,
+            "son_gorulme": "",
+            "durum": "Aranıyor"
+          },
+          {
+            "id": 2,
+            "erisim": "TAM",
+            "kullanici_adi": "Hero",
+            "sifre": "123456789",
+            "araba_id": 17,
+            "kazanilan_yarislar": 0,
+            "aranma_katsayisi": 1,
+            "son_gorulme": "",
+            "durum": "Aranıyor"
+          }
+        ]
+      },
+      {
+        "polis_hesap": [
+          {
+            "id": 0,
+            "erisim": "YARI",
+            "kullanici_adi": "Jack",
+            "sifre": "12345",
+            "rutbe": "Komiser",
+            "sube": "Rosewood",
+            "yakalanan_yariscilar": 10,
+            "ikramiye": 0,
+            "EMP": 1,
+            "civi_seridi": 1,
+            "helikopter": 0,
+            "barikat": 0
+          },
+          {
+            "id": 1,
+            "erisim": "TAM",
+            "kullanici_adi": "Cross",
+            "sifre": "123456789",
+            "rutbe": "Amir",
+            "sube": "Rockport",
+            "yakalanan_yariscilar": 254,
+            "ikramiye": 60000,
+            "EMP": 7,
+            "civi_seridi": 9,
+            "helikopter": 5,
+            "barikat": 32
+          },
+          {
+            "id": 2,
+            "erisim": "YARI",
+            "kullanici_adi": "Rog",
+            "sifre": "12345",
+            "rutbe": "Komiser Yardımcısı",
+            "sube": "Rockport",
+            "yakalanan_yariscilar": 12,
+            "ikramiye": 305000,
+            "EMP": 3,
+            "civi_seridi": 3,
+            "helikopter": 1,
+            "barikat": 3
+          }
+        ]
+      }
+    ],
+    "yarislar": [
+      {
+        "id": 0,
+        "yaris_ad": "Rockport Otobanı",
+        "bolge": "Rockport",
+        "uzunluk": 68,
+        "polis_sikligi": 1,
+        "inaktif_sure": "2024-05-02T13:51:12.316Z"
+      },
+      {
+        "id": 1,
+        "yaris_ad": "Rockport Merkezi",
+        "bolge": "Rockport",
+        "uzunluk": 35,
+        "polis_sikligi": 1,
+        "inaktif_sure": "2024-05-02T21:51:12.316Z"
+      },
+      {
+        "id": 2,
+        "yaris_ad": "Adrenalin",
+        "bolge": "Rosewood",
+        "uzunluk": 100,
+        "polis_sikligi": 4,
+        "inaktif_sure": "2024-05-03T13:51:12.316Z"
+      },
+      {
+        "id": 3,
+        "yaris_ad": "Ufuk Noktası",
+        "bolge": "Rosewood",
+        "uzunluk": 64,
+        "polis_sikligi": 1,
+        "inaktif_sure": "2024-05-02T13:51:12.316Z"
+      },
+      {
+        "id": 4,
+        "yaris_ad": "Büyük Kaos",
+        "bolge": "Rockport",
+        "uzunluk": 90,
+        "polis_sikligi": 3,
+        "inaktif_sure": "2025-05-02T13:51:12.316Z"
+      },
+      {
+        "id": 5,
+        "yaris_ad": "Rosewood Yarış Pisti",
+        "bolge": "Rosewood",
+        "uzunluk": 60,
+        "polis_sikligi": 5,
+        "inaktif_sure": "2024-06-02T13:51:12.316Z"
+      },
+      {
+        "id": 6,
+        "yaris_ad": "TEST",
+        "bolge": "Rockport",
+        "uzunluk": 10,
+        "polis_sikligi": 5,
+        "inaktif_sure": "2024-05-02T13:51:12.316Z"
+      }
+    ]
+  }
+]
